@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    image: ghcr.io/chibisafe/chibisafe:latest
+    environment:
+      - DB_TYPE=sqlite
+    volumes:
+      - ${APP_DATA_DIR}/uploads:/uploads
+      - ${APP_DATA_DIR}/db:/db
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
