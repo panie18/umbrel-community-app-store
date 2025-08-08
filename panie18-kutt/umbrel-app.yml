@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panie18-kutt
 name: Kutt
 tagline: "Open Source URL Shortener"
-icon: /icon.png
+icon: https://raw.githubusercontent.com/thedevs-network/kutt/9d1c873897c3f5b9a1bd0c74dc5d23f2ed01f2ec/static/images/logo-github.png
 category: utility
 version: "1.0.0"
 port: 3000
@@ -22,4 +22,5 @@ dependencies:
 releaseNotes: ""
 path: "/"
 gallery: []
+
 
