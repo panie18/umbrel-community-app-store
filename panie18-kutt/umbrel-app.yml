@@ -10,7 +10,7 @@ description: >-
   Kutt is a free and open-source URL shortener with a modern UI.
   Self-host your own URL shortener with ease.
 developer: thedevs-network
-website: https://github.com/thedevdojo/kutt
+website: https://github.com/thedevs-network/kutt
 submitter: panie18
 submission: 
 repo: https://github.com/thedevs-network/kutt
@@ -22,5 +22,6 @@ dependencies:
 releaseNotes: ""
 path: "/"
 gallery: []
-
-
+notes: |-
+  ⚠️ Please change the default passwords (`POSTGRES_PASSWORD`, `DB_PASS`, and `APP_KEY`) after installation to secure your app.
+  Currently, passwords are set to "changeme" by default.
