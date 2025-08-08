@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: chibisafe
+id: panie18-chibisafe
 name: Chibisafe
 category: media
 version: "3.6.1"
@@ -19,3 +19,4 @@ submitter: https://github.com/chibisafe/chibisafe
 gallery:
   - https://raw.githubusercontent.com/chibisafe/chibisafe/main/.github/assets/gallery1.png
   - https://raw.githubusercontent.com/chibisafe/chibisafe/main/.github/assets/gallery2.png
+
