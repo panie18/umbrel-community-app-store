@@ -1,0 +1,39 @@
+version: "0.1"
+services:
+  kutt:
+    description: "Kutt - Open Source URL Shortener"
+    icon: ./icon.png
+    image: kutt/kutt@sha256:1eb2b6cef72096f1967c5da7e2192b8b8258630d8310f6c3bb3e32697dde1771
+    ports:
+      - 3000:3000
+    environment:
+      - name: DB_HOST
+        description: "Database Host"
+        default: "db"
+      - name: DB_USER
+        description: "Database User"
+        default: "kutt"
+      - name: DB_PASS
+        description: "Database Password"
+        default: "changeme"
+        required: true
+        secret: true
+      - name: DB_NAME
+        description: "Database Name"
+        default: "kutt"
+      - name: APP_KEY
+        description: "Application secret key"
+        default: "changeme"
+        required: true
+        secret: true
+    volumes: []
+    depends_on:
+      - db
+
+  db:
+    image: postgres@sha256:4d89c904835259bc58876520e56267ca07a4ebd6a027f7814bbbf91b50d685be
+    environment:
+      POSTGRES_USER: kutt
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: kutt
+    volumes: []

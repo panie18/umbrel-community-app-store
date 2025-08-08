@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres@sha256:4d89c904835259bc58876520e56267ca07a4ebd6a027f7814bbbf91b50d685be
+    environment:
+      POSTGRES_USER: kutt
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: kutt
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  kutt:
+    image: kutt/kutt@sha256:1eb2b6cef72096f1967c5da7e2192b8b8258630d8310f6c3bb3e32697dde1771
+    environment:
+      DB_HOST: db
+      DB_USER: kutt
+      DB_PASS: changeme
+      DB_NAME: kutt
+      APP_KEY: "changeme"
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db-data:
