@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: panie18-glance
+name: Glance
+tagline: "A beautiful self-hosted gallery and media manager"
+icon: https://avatars.githubusercontent.com/u/159397742?v=4
+category: media
+version: "1.0.0"
+port: 3001
+description: >-
+  Glance is a modern, fast, and privacy-focused self-hosted gallery for your photos and media.
+  Enjoy a clean and beautiful UI to browse and manage your media library easily.
+developer: Glance Team
+website: https://github.com/glanceapp/glance
+submitter: panie18
+submission: ""
+repo: https://github.com/glanceapp/glance
+support: https://github.com/glanceapp/glance/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: ""
+path: "/"
+gallery: []

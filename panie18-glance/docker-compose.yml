@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  glance:
+    image: glanceapp/glance@sha256:6df86a7e8868d1eda21f35205134b1962c422957e42a0c44d4717c8e8f741b1a
+    ports:
+      - 3001:3000
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
