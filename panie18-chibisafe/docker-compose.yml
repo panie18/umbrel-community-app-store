@@ -16,7 +16,19 @@ services:
       - PUID=1000
       - PGID=1000
       - NODE_ENV=production
-      - BASE_URL=http://app_proxy:3000
+      - DATABASE_URL=postgresql://chibisafe:chibisafe@chibisafe_db:5432/chibisafe
     volumes:
       - ${APP_DATA_DIR}/uploads:/uploads
       - ${APP_DATA_DIR}/config:/config
+    depends_on:
+      - chibisafe_db
+
+  chibisafe_db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=chibisafe
+      - POSTGRES_PASSWORD=chibisafe
+      - POSTGRES_DB=chibisafe
+    volumes:
+      - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
