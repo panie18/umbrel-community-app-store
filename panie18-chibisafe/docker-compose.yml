@@ -1,13 +1,20 @@
-version: "3.7"
+version: "3.9"
 
 services:
-  app:
-    image: ghcr.io/chibisafe/chibisafe:latest
+  app_proxy:
     environment:
-      - DB_TYPE=sqlite
+      APP_HOST: chibisafe_server
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+
+  chibisafe_server:
+    image: ghcr.io/chibisafe/chibisafe:v3.6.1
+    restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - NODE_ENV=production
+      - CHIBISAFE_PORT=3000
     volumes:
       - ${APP_DATA_DIR}/uploads:/uploads
-      - ${APP_DATA_DIR}/db:/db
-    ports:
-      - "3000:3000"
-    restart: unless-stopped
+      - ${APP_DATA_DIR}/config:/config
