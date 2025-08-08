@@ -1,22 +1,24 @@
 manifestVersion: 1
 id: panie18-chibisafe
 name: Chibisafe
+tagline: Self-hosted file uploader and sharing platform
+icon: https://chibisafe.app/img/logo.svg
 category: media
 version: "3.6.1"
-tagline: Secure file uploads and sharing, self-hosted.
-description: >
-  Chibisafe is a self-hosted file uploader and sharing platform, built with privacy and simplicity in mind. 
-  Upload images, videos, and more — fast and securely, with a beautiful interface.
+port: 3000
+description: >-
+  📁 Chibisafe is a self-hosted file uploader — beautiful, fast, and secure.
+  Upload, share, and manage files from your own server, with full control.
+  Designed for simplicity and privacy.
 
 developer: Chibisafe
 website: https://chibisafe.app
+submitter: panie18
 repo: https://github.com/chibisafe/chibisafe
 support: https://github.com/chibisafe/chibisafe/issues
-port: 3000
-icon: https://chibisafe.app/img/logo.svg
-publisher: panie18
-submitter: https://github.com/chibisafe/chibisafe
-gallery:
-  - https://raw.githubusercontent.com/chibisafe/chibisafe/main/.github/assets/gallery1.png
-  - https://raw.githubusercontent.com/chibisafe/chibisafe/main/.github/assets/gallery2.png
-
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: ""
+path: "/"
+gallery: []
