@@ -1,24 +1,25 @@
 manifestVersion: 1
-id: panie18-kutt
-name: Kutt
-tagline: "Open Source URL Shortener"
-icon: /icon.png
-category: utility
+id: panie18-swingmusic
+name: Swing Music
+tagline: Self-hosted music streaming (Spotify alternative)
+icon: https://cdn-panie18.pages.dev/icon.png
+category: media
 version: "1.0.0"
-port: 3000
+port: 1970
 description: >-
-  Kutt is a free and open-source URL shortener with a modern UI.
-  Self-host your own URL shortener with ease.
-developer: panie18
-website: https://github.com/thedevdojo/kutt
+  🎵 Swing Music is a self-hosted music streaming app — modern, clean, and powerful.
+  It lets you create your own private Spotify-like service at home.
+  🧑‍💻 Built with privacy in mind.
+  Swing Music keeps your data local. Host your music library, stream from any browser, and enjoy full control.
+developer: Mungai Njoroge
+website: https://github.com/swing-opensource/swingmusic
 submitter: panie18
-submission: https://github.com/getumbrel/umbrel-apps/pull/XXXX  # Update mit deinem PR Link
-repo: https://github.com/thedevdojo/kutt
-support: https://github.com/thedevdojo/kutt/issues
+submission: https://github.com/getumbrel/umbrel-apps/pull/3412
+repo: https://github.com/swing-opensource/swingmusic
+support: https://github.com/swing-opensource/swingmusic/issues
 defaultUsername: "admin"
-defaultPassword: "changeme"
-dependencies:
-  - postgres
+defaultPassword: "admin"
+dependencies: []
 releaseNotes: ""
 path: "/"
 gallery: []
