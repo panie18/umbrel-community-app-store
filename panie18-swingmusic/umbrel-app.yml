@@ -1,6 +1,7 @@
 manifestVersion: 1
 id: swingmusic
 name: Swing Music
+icon: https://i.imgur.com/B9R2I6L.png
 tagline: Self-hosted music streaming (Spotify alternative)
 category: media
 version: "1.0.0"
