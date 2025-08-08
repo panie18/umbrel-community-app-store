@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
 
   kutt:
-    image: kutt/kutt@sha256:1eb2b6cef72096f1967c5da7e2192b8b8258630d8310f6c3bb3e32697dde1771
+    image: thedevdojo/kutt@sha256:1eb2b6cef72096f1967c5da7e2192b8b8258630d8310f6c3bb3e32697dde1771
     environment:
       DB_HOST: db
       DB_USER: kutt
