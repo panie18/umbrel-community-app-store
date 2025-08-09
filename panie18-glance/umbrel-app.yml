@@ -1,19 +1,16 @@
 manifestVersion: 1
 id: panie18-glance
 name: Glance
-tagline: A self-hosted dashboard for all your links and widgets
+tagline: A self-hosted dashboard for your most important info
 icon: https://avatars.githubusercontent.com/u/159397742?v=4
-category: productivity
-version: "1.0.0"
+category: utilities
+version: "0.6.0"
 port: 3000
 description: >-
-  Glance is a beautiful, self-hosted dashboard for your favorite links, widgets, and integrations.
-  Keep all your important tools and information in one place.
-  💡 Fully customizable and privacy-focused.
+  Glance is a minimal, self-hosted dashboard for widgets, links, and server info
 developer: glanceapp
 website: https://github.com/glanceapp/glance
 submitter: panie18
-submission: https://github.com/getumbrel/umbrel-apps/pull/XXXX
 repo: https://github.com/glanceapp/glance
 support: https://github.com/glanceapp/glance/issues
 defaultUsername: ""
@@ -22,5 +19,3 @@ dependencies: []
 releaseNotes: ""
 path: "/"
 gallery: []
-
-
