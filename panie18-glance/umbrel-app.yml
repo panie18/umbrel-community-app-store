@@ -7,7 +7,7 @@ category: utilities
 version: "0.6.0"
 port: 3000
 description: >-
-  Glance is a minimal, self-hosted dashboard for widgets, links, and server info
+  Glance is a minimal, self-hosted dashboard for widgets, links, and server info.
 developer: glanceapp
 website: https://github.com/glanceapp/glance
 submitter: panie18
@@ -19,3 +19,4 @@ dependencies: []
 releaseNotes: ""
 path: "/"
 gallery: []
+
