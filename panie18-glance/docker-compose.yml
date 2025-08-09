@@ -8,19 +8,8 @@ services:
       PROXY_AUTH_ADD: "false"
 
   glance_server:
-    image: ghcr.io/glanceapp/glance:v0.6.0@sha256:6df86a7e8868d1eda21f35205134b1962c422957e42a0c44d4717c8e8f741b1a
+    image: glanceapp/glance:latest@sha256:6df86a7e8868d1eda21f35205134b1962c422957e42a0c44d4717c8e8f741b1a
     restart: on-failure
-    environment:
-      - PUID=1000
-      - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/config:/app/config:ro
-      - ${APP_DATA_DIR}/data:/data
-
-  fix_permissions:
-    image: ghcr.io/glanceapp/glance:v0.6.0@sha256:6df86a7e8868d1eda21f35205134b1962c422957e42a0c44d4717c8e8f741b1a
-    container_name: glance_fix_permissions
-    volumes:
-      - ${APP_DATA_DIR}/data:/data
-    entrypoint: ["sh", "-c", "chmod -R 777 /data"]
-    restart: "no"
+      - ${APP_DATA_DIR}/data:/data:rw
