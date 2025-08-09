@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: glance
+id: panie18-glance
 name: Glance
 tagline: A self-hosted dashboard for all your links and widgets
 icon: https://avatars.githubusercontent.com/u/159397742?v=4
@@ -22,3 +22,4 @@ dependencies: []
 releaseNotes: ""
 path: "/"
 gallery: []
+
