@@ -7,7 +7,7 @@ category: productivity
 version: "1.0.0"
 port: 3000
 description: >-
-  🖥 Glance is a beautiful, self-hosted dashboard for your favorite links, widgets, and integrations.
+  Glance is a beautiful, self-hosted dashboard for your favorite links, widgets, and integrations.
   Keep all your important tools and information in one place.
   💡 Fully customizable and privacy-focused.
 developer: glanceapp
@@ -22,4 +22,5 @@ dependencies: []
 releaseNotes: ""
 path: "/"
 gallery: []
+
 
