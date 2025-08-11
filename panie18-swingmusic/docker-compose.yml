@@ -1,4 +1,3 @@
-
 version: "3.9"
 
 services:
@@ -9,6 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   swingmusic_server:
+    container_name: swingmusic_server
     image: ghcr.io/swingmx/swingmusic:v2.0.8@sha256:a71ef5fba8526cb8a748647fea39d224953368af3621be9b7667c9a4c79ff622
     restart: on-failure
     environment:
@@ -21,9 +21,8 @@ services:
   fix_permissions:
     image: ghcr.io/swingmx/swingmusic:v2.0.8@sha256:a71ef5fba8526cb8a748647fea39d224953368af3621be9b7667c9a4c79ff622
     container_name: swingmusic_fix_permissions
+    user: "1000:1000"   # safer than root
     volumes:
       - ${APP_DATA_DIR}/music:/music
     entrypoint: ["sh", "-c", "chmod -R 777 /music"]
-    restart: "no"
-
-
+    restart: on-failure
