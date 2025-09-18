@@ -1,30 +1,37 @@
 manifestVersion: 1
 id: panie18-coolify
 name: Coolify
-tagline: Self-hosted Heroku alternative
-icon: https://avatars.githubusercontent.com/u/60715044?v=4
-category: developer
 version: "1.0.0"
-port: 3000
+tagline: Self-hosted PaaS to deploy apps and databases easily
 description: >
-  Coolify is an open-source platform for managing your apps, databases, and web services.
-developer: Coollabs
-website: https://coolify.io
+  Coolify is an open source self-hosted PaaS to deploy apps and databases with Docker. 
+  This Umbrel app will help you run Coolify with proper auto-generated secrets.
+author: DeinName
+icon: https://avatars.githubusercontent.com/u/60715044?v=4
+website: https://github.com/coollabsio/coolify
 repo: https://github.com/coollabsio/coolify
-dependencies: []
-releaseNotes: Initial Umbrel Community App release
+support: https://github.com/coollabsio/coolify/issues
+category: developer-tools
+port: 3000
 
-path: "./"
-
-# Definieren von Einstellungen, die Umbrel im UI zeigt
 settings:
   - id: POSTGRES_PASSWORD
     type: password
-    label: "Postgres Password"
+    label: "PostgreSQL Passwort"
     default: ""
-    description: "Passwort für die PostgreSQL Datenbank. Wird automatisch generiert, wenn leer."
+    description: "Passwort für PostgreSQL (wird automatisch generiert, wenn leer)."
   - id: REDIS_PASSWORD
     type: password
-    label: "Redis Password"
+    label: "Redis Passwort"
     default: ""
-    description: "Passwort für Redis. Wird automatisch generiert, wenn leer."
+    description: "Passwort für Redis (wird automatisch generiert, wenn leer)."
+  - id: APP_KEY
+    type: password
+    label: "APP Key"
+    default: ""
+    description: "App Verschlüsselungsschlüssel (wird automatisch generiert, wenn leer)."
+  - id: APP_PORT
+    type: number
+    label: "Coolify Port"
+    default: 3000
+    description: "Port auf dem Coolify läuft."
