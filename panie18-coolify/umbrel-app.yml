@@ -1,7 +1,7 @@
 id: "panie18-coolify"
 name: "Coolify"
 version: "4.0.0"
-releaseNotes: "Community app release of Coolify."
+releaseNotes: "Initial Umbrel Community App release using full docker-compose from Coolify."
 icon: "https://raw.githubusercontent.com/coollabsio/coolify/main/public/icon.png"
 category: "developer"
 type: "app"
@@ -9,8 +9,8 @@ type: "app"
 port: 3000
 
 description: >
-  Coolify ist eine Open-Source-Alternative zu Heroku/Vercel/Netlify.
-  Du kannst damit deine eigenen Apps deployen und verwalten.
+  Coolify ist eine Open-Source-Alternative zu Heroku, Vercel und Netlify.
+  Dieses Setup basiert auf dem offiziellen docker-compose mit Datenbank, Cache und Realtime-Diensten.
 
 developer: "Coollabs"
 website: "https://coolify.io"
