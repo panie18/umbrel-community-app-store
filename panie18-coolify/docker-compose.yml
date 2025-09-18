@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  coolify:
+    image: coollabsio/coolify:latest
+    container_name: panie18-coolify
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - coolify_data:/app/data
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  coolify_data:
