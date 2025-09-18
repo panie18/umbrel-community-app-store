@@ -26,8 +26,8 @@ services:
     networks:
       - coolify
     environment:
-      POSTGRES_PASSWORD: changeme
-      POSTGRES_DB: coolify
+      POSTGRES_PASSWORD: "changeme"
+      POSTGRES_DB: "coolify"
 
   redis:
     image: redis:7-alpine
@@ -50,5 +50,5 @@ volumes:
 
 networks:
   coolify:
-    name: panie18-coolify-network
     driver: bridge
+    name: panie18-coolify-network
