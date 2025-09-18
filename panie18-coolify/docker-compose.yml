@@ -1,19 +1,17 @@
-version: "3.8"
-
 services:
   app:
     image: coollabsio/coolify:latest
     container_name: panie18-coolify
     restart: always
-    working_dir: /var/www/html
-    extra_hosts:
-      - host.docker.internal:host-gateway
     networks:
       - coolify
     depends_on:
       - postgres
       - redis
       - soketi
+    environment:
+      REDIS_HOST: coolify-redis
+      POSTGRES_HOST: coolify-db
     ports:
       - "3000:3000"
     volumes:
@@ -21,7 +19,7 @@ services:
 
   postgres:
     image: postgres:15-alpine
-    container_name: panie18-coolify-db
+    container_name: coolify-db
     restart: always
     networks:
       - coolify
@@ -31,24 +29,21 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: panie18-coolify-redis
+    container_name: coolify-redis
     restart: always
     networks:
       - coolify
 
   soketi:
     image: quay.io/soketi/soketi:latest-16-alpine
-    container_name: panie18-coolify-realtime
-    extra_hosts:
-      - host.docker.internal:host-gateway
+    container_name: coolify-realtime
     restart: always
     networks:
       - coolify
 
-volumes:
-  coolify_data:
-
 networks:
   coolify:
     driver: bridge
-    name: panie18-coolify-network
+
+volumes:
+  coolify_data:
