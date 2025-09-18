@@ -4,7 +4,7 @@ name: Coolify
 tagline: Self-hosted Heroku alternative
 icon: https://avatars.githubusercontent.com/u/60715044?v=4
 category: developer
-version: "4.0.0"
+version: "1.0.0"
 port: 3000
 description: >
   Coolify is an open-source platform for managing your apps, databases, and web services.
@@ -13,5 +13,18 @@ website: https://coolify.io
 repo: https://github.com/coollabsio/coolify
 dependencies: []
 releaseNotes: Initial Umbrel Community App release
+
 path: "./"
 
+# Definieren von Einstellungen, die Umbrel im UI zeigt
+settings:
+  - id: POSTGRES_PASSWORD
+    type: password
+    label: "Postgres Password"
+    default: ""
+    description: "Passwort für die PostgreSQL Datenbank. Wird automatisch generiert, wenn leer."
+  - id: REDIS_PASSWORD
+    type: password
+    label: "Redis Password"
+    default: ""
+    description: "Passwort für Redis. Wird automatisch generiert, wenn leer."
