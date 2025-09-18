@@ -2,7 +2,7 @@ id: "panie18-coolify"
 name: "Coolify"
 version: "4.0.0"
 releaseNotes: "Initial Umbrel Community App release using full docker-compose from Coolify."
-icon: "https://raw.githubusercontent.com/coollabsio/coolify/main/public/icon.png"
+icon: "https://avatars.githubusercontent.com/u/60715044?v=4"
 category: "developer"
 type: "app"
 
@@ -19,3 +19,4 @@ repo: "https://github.com/coollabsio/coolify"
 dependencies: []
 
 path: "docker/docker-compose.yml"
+
