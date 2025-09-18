@@ -1,7 +1,7 @@
 id: "panie18-coolify"
 name: "Coolify"
 version: "4.0.0"
-releaseNotes: "Initial community app release of Coolify."
+releaseNotes: "Community app release of Coolify."
 icon: "https://raw.githubusercontent.com/coollabsio/coolify/main/public/icon.png"
 category: "developer"
 type: "app"
