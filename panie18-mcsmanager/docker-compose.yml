@@ -1,24 +1,24 @@
 version: "3.7"
 
 services:
-  mcsmanager-web:
+  app_proxy:
+    environment:
+      APP_HOST: mcsmanager_web
+      APP_PORT: 23333
+      PROXY_AUTH_ADD: "false"
+
+  mcsmanager_web:
     image: githubyumao/mcsmanager-web:latest
-    restart: on-failure
-    stop_grace_period: 1m
-    ports:
-      - "${APP_MCSMANAGER_PORT}:23333"
+    restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/web/data:/opt/mcsmanager/web/data
       - ${APP_DATA_DIR}/web/logs:/opt/mcsmanager/web/logs
     depends_on:
-      - mcsmanager-daemon
-    networks:
-      - default
+      - mcsmanager_daemon
 
-  mcsmanager-daemon:
+  mcsmanager_daemon:
     image: githubyumao/mcsmanager-daemon:latest
-    restart: on-failure
-    stop_grace_period: 1m
+    restart: unless-stopped
     ports:
       - "24444:24444"
     environment:
@@ -27,9 +27,3 @@ services:
       - ${APP_DATA_DIR}/daemon/data:/opt/mcsmanager/daemon/data
       - ${APP_DATA_DIR}/daemon/logs:/opt/mcsmanager/daemon/logs
       - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - default
-
-networks:
-  default:
-    name: mcsmanager_network
