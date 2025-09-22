@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  mcsmanager-web:
+    image: githubyumao/mcsmanager-web:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - "${APP_MCSMANAGER_PORT}:23333"
+    volumes:
+      - ${APP_DATA_DIR}/web/data:/opt/mcsmanager/web/data
+      - ${APP_DATA_DIR}/web/logs:/opt/mcsmanager/web/logs
+    depends_on:
+      - mcsmanager-daemon
+    networks:
+      - default
+
+  mcsmanager-daemon:
+    image: githubyumao/mcsmanager-daemon:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - "24444:24444"
+    environment:
+      - MCSM_DOCKER_WORKSPACE_PATH=${APP_DATA_DIR}/daemon/data/InstanceData
+    volumes:
+      - ${APP_DATA_DIR}/daemon/data:/opt/mcsmanager/daemon/data
+      - ${APP_DATA_DIR}/daemon/logs:/opt/mcsmanager/daemon/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - default
+
+networks:
+  default:
+    name: mcsmanager_network

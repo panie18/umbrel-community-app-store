@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: mcsmanager
+category: developer-tools
+name: MCSManager
+version: "latest"
+tagline: Modern web-based management panel for Minecraft and Steam game servers
+description: >-
+  MCSManager Panel is a fast-deploying, distributed, multi-user, and modern web-based management panel for Minecraft, Steam, and other game servers.
+  
+  
+  Features:
+  
+  - One-click deployment of Minecraft or Steam game servers via built-in application marketplace
+  
+  - Compatible with most Steam-based game servers including Palworld, Squad, Project Zomboid, Terraria, and more
+  
+  - Customizable web interface with drag-and-drop card layout
+  
+  - Full Docker Hub image support with multi-user access
+  
+  - Distributed architecture for managing multiple machines from a single web panel
+  
+  - Lightweight TypeScript-based technology stack
+developer: MCSManager
+website: https://mcsmanager.com/
+dependencies: []
+repo: https://github.com/MCSManager/MCSManager
+support: https://discord.gg/BNpYMVX7Cd
+port: 23333
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+permissions:
+  - STORAGE_DOWNLOADS
+releaseNotes: >-
+  MCSManager is a comprehensive game server management panel that supports Minecraft, Steam games, and more. 
+  This installation provides both the web interface (port 23333) and daemon service for complete server management capabilities.
+submitter: Umbrel Community
+submission: https://github.com/getumbrel/umbrel-community-app-store
