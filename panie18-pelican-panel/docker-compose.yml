@@ -12,6 +12,7 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+      - CADDY_EMAIL=deine@email.de    # <--- Trage hier deine echte E-Mail-Adresse ein!
     volumes:
       - ${APP_DATA_DIR}/config:/app/config
       - ${APP_DATA_DIR}/data:/app/data
