@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: panie18-pelican-panel
+name: Pelican Panel
+tagline: Modern web-based server management panel
+icon: "https://raw.githubusercontent.com/pelican-dev/panel/main/public/icon.png"
+category: developer-tools
+version: "latest"
+port: 8080
+description: >-
+  Pelican Panel is a modern, user-friendly management panel for game and application servers. Manage instances, users, and settings via a rich web UI.
+developer: Pelican Dev
+website: https://github.com/pelican-dev/panel
+submitter: panie18
+repo: https://github.com/pelican-dev/panel
+support: https://github.com/pelican-dev/panel/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Pelican Panel is a modern management panel for game and app servers. 
+  This installation provides a web interface on port 8080.
+path: "/"
+gallery: []

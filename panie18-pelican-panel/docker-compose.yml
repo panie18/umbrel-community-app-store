@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: pelican_panel_server
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+
+  pelican_panel_server:
+    image: ghcr.io/pelican-dev/panel:latest
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ${APP_DATA_DIR}/config:/app/config
+      - ${APP_DATA_DIR}/data:/app/data
