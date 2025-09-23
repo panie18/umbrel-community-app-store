@@ -1,23 +1,19 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: discopanel_server
-      APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
-
-  discopanel_server:
+  discopanel:
     image: nickheyer/discopanel:latest
+    container_name: discopanel
     restart: unless-stopped
+    ports:
+      - "8080:8080"
     environment:
       - DISCOPANEL_DATA_DIR=/app/data
-      - DISCOPANEL_HOST_DATA_PATH=${APP_DATA_DIR}/data
-      - TZ=UTC
+      - DISCOPANEL_HOST_DATA_PATH=/home/user/data   # Passe den Pfad ggf. an!
+      - TZ=Europe/Berlin
     volumes:
-      - ${APP_DATA_DIR}/data:/app/data
-      - ${APP_DATA_DIR}/backups:/app/backups
-      - ${APP_DATA_DIR}/tmp:/app/tmp
-      - /var/run/docker.sock:/var/run/docker.sock
-      # Konfiguration optional:
-      # - ${APP_DATA_DIR}/config.yaml:/app/config.yaml:ro
+      - /var/run/docker.sock:/var/run/docker.sock    # WICHTIG: Docker-Socket für Container-Steuerung
+      - /home/user/data:/app/data                   # Passe ggf. für Serverdaten!
+      - ./backups:/app/backups                      # Backup-Ordner (optional)
+      - ./tmp:/app/tmp                              # Temp-Ordner (optional)
+      - ./config.yaml:/app/config.yaml:ro           # Eigene Config (optional)
