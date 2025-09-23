@@ -17,7 +17,7 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  DiscoPanel is a modern Discord server management panel. 
+  DiscoPanel is a modern Discord server management panel.
   This installation provides a web interface on port 3000.
 path: "/"
 gallery: []
