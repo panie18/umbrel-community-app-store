@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: discopanel_server
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+
+  discopanel_server:
+    image: ghcr.io/nickheyer/discopanel:latest
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ${APP_DATA_DIR}/config:/app/config
+      - ${APP_DATA_DIR}/data:/app/data

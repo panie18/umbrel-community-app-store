@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: panie18-discopanel
+name: DiscoPanel
+tagline: Modern Discord Server Management Panel
+icon: "https://raw.githubusercontent.com/nickheyer/discopanel/main/public/icon.png"
+category: developer-tools
+version: "latest"
+port: 3000
+description: >-
+  DiscoPanel is a modern, web-based management panel for Discord servers. Manage channels, roles, permissions, and bot integrations with an intuitive UI.
+developer: Nick Heyer
+website: https://github.com/nickheyer/discopanel
+submitter: panie18
+repo: https://github.com/nickheyer/discopanel
+support: https://github.com/nickheyer/discopanel/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  DiscoPanel is a modern Discord server management panel. 
+  This installation provides a web interface on port 3000.
+path: "/"
+gallery: []
