@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panie18-discopanel
 name: DiscoPanel
 tagline: Modern Discord Server Management Panel
-icon: "https://raw.githubusercontent.com/nickheyer/discopanel/main/public/icon.png"
+icon: "https://github.com/nickheyer/discopanel/raw/main/web/discopanel/static/g1_256x256.png"
 category: developer-tools
 version: "latest"
 port: 3000
