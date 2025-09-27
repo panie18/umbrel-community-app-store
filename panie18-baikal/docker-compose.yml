@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  baikal:
+    image: ckulka/baikal:latest
+    container_name: baikal
+    restart: unless-stopped
+    ports:
+      - "8083:80"
+    volumes:
+      - ${APP_DATA_DIR}/baikal:/var/www/baikal

@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-akaunting
+name: Akaunting
+tagline: Online accounting software
+icon: "https://raw.githubusercontent.com/akaunting/akaunting/master/public/assets/img/logo.png"
+category: productivity
+version: "latest"
+port: 8080
+description: >-
+  Akaunting is a free, online accounting software designed for small businesses and freelancers.
+developer: Akaunting
+website: https://akaunting.com/
+submitter: panie18
+repo: https://github.com/akaunting/akaunting
+support: https://github.com/akaunting/akaunting/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Online accounting software for small businesses.
+path: "/"
+gallery: []

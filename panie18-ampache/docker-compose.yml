@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  ampache:
+    image: ampache/ampache:latest
+    container_name: ampache
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    volumes:
+      - ${APP_DATA_DIR}/ampache:/var/www/html

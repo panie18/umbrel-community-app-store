@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-authelia
+name: Authelia
+tagline: Authentication and authorization server
+icon: "https://www.authelia.com/images/logo-square.png"
+category: security
+version: "latest"
+port: 9091
+description: >-
+  Authelia is an open-source authentication and authorization server providing 2FA and SSO.
+developer: Authelia
+website: https://www.authelia.com/
+submitter: panie18
+repo: https://github.com/authelia/authelia
+support: https://github.com/authelia/authelia/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Authentication and authorization server.
+path: "/"
+gallery: []

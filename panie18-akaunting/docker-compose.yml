@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  akaunting:
+    image: akaunting/akaunting:latest
+    container_name: akaunting
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ${APP_DATA_DIR}/akaunting:/var/www/html

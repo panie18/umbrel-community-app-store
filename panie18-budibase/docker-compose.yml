@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  budibase:
+    image: budibase/budibase-server:latest
+    container_name: budibase
+    restart: unless-stopped
+    ports:
+      - "10000:10000"
+    volumes:
+      - ${APP_DATA_DIR}/budibase:/data

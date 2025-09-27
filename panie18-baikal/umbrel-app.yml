@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-baikal
+name: Baïkal
+tagline: CalDAV and CardDAV server
+icon: "https://raw.githubusercontent.com/sabre-io/Baikal/master/html/res/baikal-logo.png"
+category: productivity
+version: "latest"
+port: 8083
+description: >-
+  Baïkal is a lightweight CalDAV and CardDAV server for calendar and contact sync.
+developer: Baïkal
+website: https://sabre.io/baikal/
+submitter: panie18
+repo: https://github.com/sabre-io/Baikal
+support: https://github.com/sabre-io/Baikal/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  CalDAV and CardDAV server.
+path: "/"
+gallery: []

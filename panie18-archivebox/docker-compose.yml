@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  archivebox:
+    image: archivebox/archivebox:latest
+    container_name: archivebox
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${APP_DATA_DIR}/archivebox:/data

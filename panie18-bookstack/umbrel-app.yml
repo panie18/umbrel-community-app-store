@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-bookstack
+name: BookStack
+tagline: Wiki and knowledge management
+icon: "https://raw.githubusercontent.com/BookStackApp/BookStack/master/public/icon.png"
+category: productivity
+version: "latest"
+port: 6875
+description: >-
+  BookStack is a free and open source Wiki and knowledge management platform.
+developer: BookStackApp
+website: https://www.bookstackapp.com/
+submitter: panie18
+repo: https://github.com/BookStackApp/BookStack
+support: https://github.com/BookStackApp/BookStack/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Wiki and knowledge management platform.
+path: "/"
+gallery: []

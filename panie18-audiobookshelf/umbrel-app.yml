@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-audiobookshelf
+name: Audiobookshelf
+tagline: Self-hosted audiobook server
+icon: "https://audiobookshelf.org/logo512.png"
+category: media
+version: "latest"
+port: 13378
+description: >-
+  Audiobookshelf is a self-hosted audiobook and podcast server.
+developer: Audiobookshelf
+website: https://audiobookshelf.org/
+submitter: panie18
+repo: https://github.com/advplyr/audiobookshelf
+support: https://github.com/advplyr/audiobookshelf/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Self-hosted audiobook server.
+path: "/"
+gallery: []

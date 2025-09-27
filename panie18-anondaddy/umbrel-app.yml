@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-anonaddy
+name: AnonAddy
+tagline: Anonymous email forwarding
+icon: "https://anonaddy.com/icons/icon-512x512.png"
+category: privacy
+version: "latest"
+port: 8082
+description: >-
+  AnonAddy is an open source email forwarding service to protect your real email address.
+developer: AnonAddy
+website: https://anonaddy.com/
+submitter: panie18
+repo: https://github.com/anonaddy/anonaddy
+support: https://github.com/anonaddy/anonaddy/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Anonymous email forwarding service.
+path: "/"
+gallery: []

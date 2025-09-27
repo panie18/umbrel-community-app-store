@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-budibase
+name: Budibase
+tagline: Low-code app platform
+icon: "https://budibase-public-assets.s3.eu-west-1.amazonaws.com/logo-square.png"
+category: developer-tools
+version: "latest"
+port: 10000
+description: >-
+  Budibase is an open-source low-code platform for building internal tools and apps.
+developer: Budibase
+website: https://budibase.com/
+submitter: panie18
+repo: https://github.com/Budibase/budibase
+support: https://github.com/Budibase/budibase/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Low-code platform for internal tools.
+path: "/"
+gallery: []

@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-archivebox
+name: ArchiveBox
+tagline: Archive the web
+icon: "https://github.com/ArchiveBox/ArchiveBox/raw/master/docs/img/logo.svg"
+category: tools
+version: "latest"
+port: 8000
+description: >-
+  ArchiveBox is a powerful, self-hosted web archiving tool to collect, save, and view sites offline.
+developer: ArchiveBox
+website: https://archivebox.io/
+submitter: panie18
+repo: https://github.com/ArchiveBox/ArchiveBox
+support: https://github.com/ArchiveBox/ArchiveBox/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Archive the web for offline access.
+path: "/"
+gallery: []

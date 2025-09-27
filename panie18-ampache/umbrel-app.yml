@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-ampache
+name: Ampache
+tagline: Web-based music streaming
+icon: "https://github.com/ampache/ampache/raw/master/public/img/ampache.png"
+category: media
+version: "latest"
+port: 8081
+description: >-
+  Ampache is a web-based audio streaming application and file manager.
+developer: Ampache
+website: https://ampache.org/
+submitter: panie18
+repo: https://github.com/ampache/ampache
+support: https://github.com/ampache/ampache/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Web-based music streaming.
+path: "/"
+gallery: []
