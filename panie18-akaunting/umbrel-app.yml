@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panie18-akaunting
 name: Akaunting
 tagline: Online accounting software
-icon: "https://raw.githubusercontent.com/akaunting/akaunting/master/public/assets/img/logo.png"
+icon: "https://assets.akaunting.com/site/img/logo/akaunting-logo.svg"
 category: productivity
 version: "latest"
 port: 8080
