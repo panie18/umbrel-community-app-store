@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panie18-actual
+name: Actual
+tagline: Personal finance tool
+icon: "https://actualbudget.github.io/static/icon.png"
+category: productivity
+version: "latest"
+port: 5006
+description: >-
+  Actual is a powerful, open-source personal finance tool with privacy and flexibility at its core.
+developer: Actual Budget
+website: https://actualbudget.org/
+submitter: panie18
+repo: https://github.com/actualbudget/actual-server
+support: https://github.com/actualbudget/actual-server/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >-
+  Open source personal finance tool.
+path: "/"
+gallery: []
