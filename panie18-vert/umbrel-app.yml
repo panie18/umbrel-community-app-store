@@ -1,38 +1,36 @@
-manifestVersion: 1
-id: panie18-vert
-name: VERT (panie18)
-version: "1.0.0"
-tagline: VERT — modern link / content hub
-icon: "https://raw.githubusercontent.com/VERT-sh/VERT/main/assets/icon.png"
-category: utilities
-port: 3000
-description: >
-  VERT is a modern content hub. This Umbrel package provides an easy way to run VERT via Docker (build from source or use the published image).
-developer: VERT
-website: https://github.com/VERT-sh/VERT
-submitter: panie18
-repo: https://github.com/VERT-sh/VERT
-support: https://github.com/VERT-sh/VERT/issues
-defaultUsername: ""
-defaultPassword: ""
-dependencies: []
-releaseNotes: >
-  Installing VERT via this Umbrel app will start the VERT web service on port 3000 (host) -> 80 (container).
+version: "3.8"
+services:
+  vert:
+    # Default: use the prebuilt image from GitHub Container Registry (fast, simple)
+    image: ghcr.io/vert-sh/vert:latest
 
-  Using Docker
-  ------------
-  This Umbrel app supports two modes:
-  1. Build from the VERT repository (so you can set build-time variables) — recommended if you need to change PUB_* build args.
-  2. Use the prebuilt image from the GitHub Container Registry (faster, but build-time variables are baked into the image).
+    # If you need custom build-time PUB_* args, comment the `image:` line above and
+    # uncomment the `build:` block below, then provide your desired build args.
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   args:
+    #     PUB_ENV: "production"
+    #     PUB_HOSTNAME: "vert.sh"
+    #     PUB_PLAUSIBLE_URL: "https://plausible.example.com"
+    #     PUB_VERTD_URL: "https://vertd.vert.sh"
+    #     PUB_DONATION_URL: "https://donations.vert.sh"
+    #     PUB_DISABLE_ALL_EXTERNAL_REQUESTS: "false"
+    #     PUB_STRIPE_KEY: ""
 
-  Manually building the image (via docker-compose build)
-  - The compose included with this Umbrel app sends build args into the image so you can configure:
-    PUB_ENV, PUB_HOSTNAME, PUB_PLAUSIBLE_URL, PUB_VERTD_URL, PUB_DONATION_URL, PUB_DISABLE_ALL_EXTERNAL_REQUESTS, PUB_STRIPE_KEY
-
-  Using an image from the GitHub Container Registry
-  - If you prefer the published image (ghcr.io/vert-sh/vert:latest) note that build-time variables are baked into the image and cannot be changed at runtime.
-
-  Troubleshooting
-  - If you need a custom build arg that is not exposed in the Umbrel UI, rebuild the image locally with your desired build args and update the service image tag.
-path: "/"
-gallery: []
+    container_name: panie18-vert
+    restart: unless-stopped
+    ports:
+      - "3000:80"   # host:container -> Manifest port = 3000 (Umbrel will expect this)
+    environment:
+      NODE_ENV: production
+      # Optional runtime environment vars the image might honor:
+      # PUB_HOSTNAME: "vert.sh"
+      # PUB_PLAUSIBLE_URL: "https://plausible.example.com"
+    volumes:
+      - ./data:/data   # Persistence / optional customization
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
