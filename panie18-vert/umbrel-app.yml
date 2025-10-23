@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: panie18-vert
+name: VERT (panie18)
+version: "1.0.0"
+tagline: VERT — modern link / content hub
+icon: "https://raw.githubusercontent.com/VERT-sh/VERT/main/assets/icon.png"
+category: utilities
+port: 3000
+description: >
+  VERT is a modern content hub. This Umbrel package provides an easy way to run VERT via Docker (build from source or use the published image).
+developer: VERT
+website: https://github.com/VERT-sh/VERT
+submitter: panie18
+repo: https://github.com/VERT-sh/VERT
+support: https://github.com/VERT-sh/VERT/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >
+  Installing VERT via this Umbrel app will start the VERT web service on port 3000 (host) -> 80 (container).
+
+  Using Docker
+  ------------
+  This Umbrel app supports two modes:
+  1. Build from the VERT repository (so you can set build-time variables) — recommended if you need to change PUB_* build args.
+  2. Use the prebuilt image from the GitHub Container Registry (faster, but build-time variables are baked into the image).
+
+  Manually building the image (via docker-compose build)
+  - The compose included with this Umbrel app sends build args into the image so you can configure:
+    PUB_ENV, PUB_HOSTNAME, PUB_PLAUSIBLE_URL, PUB_VERTD_URL, PUB_DONATION_URL, PUB_DISABLE_ALL_EXTERNAL_REQUESTS, PUB_STRIPE_KEY
+
+  Using an image from the GitHub Container Registry
+  - If you prefer the published image (ghcr.io/vert-sh/vert:latest) note that build-time variables are baked into the image and cannot be changed at runtime.
+
+  Troubleshooting
+  - If you need a custom build arg that is not exposed in the Umbrel UI, rebuild the image locally with your desired build args and update the service image tag.
+path: "/"
+gallery: []
