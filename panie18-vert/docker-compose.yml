@@ -1,37 +1,26 @@
-version: "3.8"
-services:
-  vert:
-    # Option A: build from local context (this allows setting build-time args)
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        PUB_ENV: "production"
-        PUB_HOSTNAME: "vert.sh"
-        PUB_PLAUSIBLE_URL: "https://plausible.example.com"
-        PUB_VERTD_URL: "https://vertd.vert.sh"
-        PUB_DONATION_URL: "https://donations.vert.sh"
-        PUB_DISABLE_ALL_EXTERNAL_REQUESTS: "false"
-        PUB_STRIPE_KEY: ""
-    # Option B: use prebuilt image from GitHub Container Registry
-    # Uncomment the next line and comment/remove the `build:` block if you prefer the published image.
-    # image: ghcr.io/vert-sh/vert:latest
+manifestVersion: 1
+id: panie18-vert
+name: vert
+version: "1.0.0"
+tagline: VERT — modern link / content hub
+icon: "https://raw.githubusercontent.com/VERT-sh/VERT/main/assets/icon.png"
+category: utilities
+port: 3000
+description: >
+  VERT is a modern content hub. This Umbrel package provides an easy way to run VERT via Docker.
+developer: VERT
+website: https://github.com/VERT-sh/VERT
+submitter: panie18
+repo: https://github.com/VERT-sh/VERT
+support: https://github.com/VERT-sh/VERT/issues
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
+releaseNotes: >
+  Install options:
+  - Use the prebuilt image (recommended for simple installs): ghcr.io/vert-sh/vert:latest
+  - Or build from source if you need to change build-time PUB_* args.
 
-    container_name: panie18-vert
-    restart: unless-stopped
-    ports:
-      - "3000:80"   # maps host 3000 -> container 80 (the app serves on 80 inside the image)
-    environment:
-      # Runtime environment variables (if the image respects them)
-      - NODE_ENV=production
-      # You can expose important runtime envs here if the image reads them at runtime.
-      # Note: many of the PUB_* values are build-time args and must be provided during build.
-      - PUB_HOSTNAME=vert.sh
-    volumes:
-      # If you want persistence or to customize assets, mount a folder here:
-      - ./data:/data
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80/ || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+  If installation fails, check container logs: docker compose -f docker-compose.yml logs -f
+path: "/"
+gallery: []
